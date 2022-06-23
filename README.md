@@ -8,16 +8,16 @@ While you're working through each level, try to only use official documentation.
 If you do need to reference past code/Stack Overflow, write down what topics you needed extra help on. Then, go find these topics in the official documentation.
 
 ## Setup:
-- [ ] Create an empty git repository with a client and server directory.
-- [ ] Link this repository to a new repository on GitHub as your remote.
+- [X] Create an empty git repository with a client and server directory.
+- [X] Link this repository to a new repository on GitHub as your remote.
 
 ## Submitting the project:
-- [ ] Submit a link to your repository below.
+- [ ] Submit a link to your repository below: https://github.com/ZachHaines/mini-app-challenge-movie-list
 
 ## Level 0
-- [ ] Build a frontend using create-react-app in your client directory.
-- [ ] Display a list of movies from hardcoded data.
-- [ ] You can use the following data:
+- [X] Build a frontend using create-react-app in your client directory.
+- [X] Display a list of movies from hardcoded data.
+- [X] You can use the following data:
 ```js
 const movies = [
   {title: 'Mean Girls'},
@@ -28,13 +28,13 @@ const movies = [
 ];
 ```
 ## Level 1
-- [ ] Establish a RESTful API using express persisting data with PostgreSQL in your server directory.
-- [ ] Confirm, routes using Postman
-- [ ] Refactor your front end to get the list of movie titles from the server, instead of using a hardcoded list of movie titles
+- [X] Establish a RESTful API using express persisting data with PostgreSQL in your server directory.
+- [X] Confirm, routes using Postman
+- [X] Refactor your front end to get the list of movie titles from the server, instead of using a hardcoded list of movie titles
 
 ## Level 2
-- [ ] Add a search bar so that a user may see if a movie is in the list.
-- [ ] After a user submits the search, display all matches (or partial matches) to that title.
+- [X] Add a search bar so that a user may see if a movie is in the list.
+- [X] After a user submits the search, display all matches (or partial matches) to that title.
 
 ## Level 3
 - [ ] Add an input field for users to add movies.
