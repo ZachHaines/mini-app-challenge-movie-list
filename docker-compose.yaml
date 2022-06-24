@@ -2,19 +2,19 @@ version: '3.1'
 
 services: 
 
-  # db:
-  #   image: 'postgres:latest'
-  #   container_name:  db
-  #   ports: 
-  #     - "5432:5432"
-  #   environment:
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: docker
-  #     POSTGRES_DB: db
-  #   volumes: 
-  #    - ./Users/zacharyhaines/docker/volumes/postgres:/var/lib/postgresql/data
-  #   networks: 
-  #    - app-network
+  db:
+    image: 'postgres:latest'
+    container_name:  pg-docker
+    ports: 
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: docker
+      POSTGRES_DB: movies
+    volumes: 
+     - ./Users/zacharyhaines/docker/volumes/postgres:/var/lib/postgresql/data
+    networks: 
+     - app-network
   
   server: 
     image: server
@@ -24,8 +24,8 @@ services:
      - 8080:8080
     networks:
       - app-network
-    # depends_on:
-      # - db
+    depends_on:
+      - db
 
   client: 
     image: client

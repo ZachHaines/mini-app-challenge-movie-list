@@ -12,7 +12,7 @@ If you do need to reference past code/Stack Overflow, write down what topics you
 - [X] Link this repository to a new repository on GitHub as your remote.
 
 ## Submitting the project:
-- [ ] Submit a link to your repository below: https://github.com/ZachHaines/mini-app-challenge-movie-list
+- [X] Submit a link to your repository below: https://github.com/ZachHaines/mini-app-challenge-movie-list
 
 ## Level 0
 - [X] Build a frontend using create-react-app in your client directory.
@@ -37,9 +37,9 @@ const movies = [
 - [X] After a user submits the search, display all matches (or partial matches) to that title.
 
 ## Level 3
-- [ ] Add an input field for users to add movies.
-- [ ] Allow users to delete added movies.
-- [ ] Display only user added movies, not the hardcoded data.
+- [X] Add an input field for users to add movies.
+- [X] Allow users to delete added movies.
+- [X] Display only user added movies, not the hardcoded data.
 
 ## Level 4
 - [ ] Add a button to each list item that allows the user to toggle a 'watched' property.
