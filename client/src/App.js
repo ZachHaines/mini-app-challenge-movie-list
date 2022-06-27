@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link, useNavigate } from 'react
 import MovieList from './components/MovieList';
 
 
+
 function App() {
   return (
     <div className="App">

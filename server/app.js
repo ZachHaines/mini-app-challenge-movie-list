@@ -7,15 +7,12 @@ app.use(cors())
 
 
 /* CREATE */
-app.post('/movies', async (req, res) => {
-  console.log('posting new movie')
-  console.log(req.body)
-  await knex('movie_list')
+app.post('/movies', (req, res) => {
+  knex('movie_list')
   .insert(req.body)
-  let result = await knex('movie_list')
-  .select('*')
-  res.status(201).send(result);
-})
+	.then(()=> knex('movie_list'))
+  .then(data => res.status(200).json(data))
+});
 
 /* READ */
 
@@ -42,6 +39,14 @@ app.get('/movies/:id', (req, res) => {
 });
 
 /* UPDATE */
+app.patch('/movies/:id', (req, res) => {
+	console.log('req.body:', req.body)
+  knex('movie_list')
+	.where('id', req.params.id)
+  .update(req.body)
+  .then(()=> knex('movie_list'))
+  .then(data => res.status(200).json(data))
+})
 
 /* DELETE */
 

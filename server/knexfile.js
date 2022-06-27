@@ -11,8 +11,8 @@ module.exports = {
       host: '127.0.0.1',
       password: 'docker',
       user: 'postgres', //default postgres user
-      port: 5432,
-			database: 'movies' // expected database name to be created
+      port: 5432, // use 5432 when using normal postgres at port 5432:5432
+			database: 'postgres' // expected database name to be created
     }
   },
 
@@ -23,7 +23,7 @@ module.exports = {
   //     password: 'docker',
   //     user: 'postgres', //default postgres user
   //     port: 5432,
-	// 		database: 'movies' // expected database name to be created
+	// 		database: 'postgres' // expected database name to be created
   //   }
   // },
 

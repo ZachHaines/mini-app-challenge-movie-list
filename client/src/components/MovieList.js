@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import FormDialog from './FormDialog';
 
 const MovieList = () => {
   const nav = useNavigate();
@@ -17,7 +18,7 @@ const MovieList = () => {
     .then(data => {
       if (data.length > 0) setNoMovieMessage('');
     })
-    .catch(err => console.error(err))
+    .catch(err => console.error('MovieList Fetch Error:', err))
   },[]);
 
   const addMovieToDatabase = (e) => {
@@ -38,7 +39,6 @@ const MovieList = () => {
         })
         .then(data => {
           setMovies(data)
-          console.log('Movie added')
           document.getElementById("inputBox").value = "";
         })
   };
@@ -86,10 +86,10 @@ const MovieList = () => {
       <div>
         {filteredMovies.map(movie => {
           return (
-              <li key={movie.id}>
-                {movie.title}
+              <div key={movie.id}>
+                <FormDialog title={movie.title} movieID={movie.id} list={{movies, setMovies}}/>
                 <input type="button" value="Del" onClick={()=> deleteMovie(movie.id)}/>
-              </li>
+              </div>
           )
         })}
       </div>
